@@ -1,7 +1,7 @@
 {
   "name": "todos",
   "version": "1.13.0",
-  "description": "This is an example of the todo-mvc app, it aims to trail ember-cli and ember.js's latest stable conventions.",
+  "description": "This is a fork of ember-cli-todos to demonstrate broccoli-serviceworker.",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -20,6 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
+    "broccoli-serviceworker": "0.0.2",
     "ember-cli": "0.2.7",
     "ember-cli-app-version": "0.3.3",
     "ember-cli-babel": "^5.0.0",
@@ -32,6 +33,9 @@
     "ember-cli-uglify": "^1.0.1",
     "ember-data": "^1.13.0",
     "ember-disable-proxy-controllers": "^1.0.0",
-    "ember-export-application-global": "^1.0.2"
+    "ember-export-application-global": "^1.0.2",
+    "express": "^4.12.4",
+    "glob": "^4.5.3",
+    "morgan": "^1.5.3"
   }
 }

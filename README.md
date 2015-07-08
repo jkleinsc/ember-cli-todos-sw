@@ -1,4 +1,5 @@
 # Todos
+This is a fork of [ember-cli-todos](https://github.com/ember-cli/ember-cli-todos) to demonstrate the use of [broccoli-serviceworker](https://github.com/jkleinsc/broccoli-serviceworker) in an ember app
 
 This is an example of the todo-mvc app, it aims to trail ember-cli and ember.js's latest stable conventions. To view a project more on the bleeding edge, feel to pop over and check out [ember-jobs](https://github.com/stefanpenner/ember-jobs)
 
@@ -46,6 +47,7 @@ Specify what it takes to deploy your app.
 
 * [ember.js](http://emberjs.com/)
 * [ember-cli](http://www.ember-cli.com/)
+* [broccoli-serviceworker](https://github.com/jkleinsc/broccoli-serviceworker)
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)

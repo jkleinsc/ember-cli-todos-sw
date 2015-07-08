@@ -52,6 +52,20 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
+  
+  ENV.serviceWorker = {
+    debug: false,
+    enabled: true,
+    serviceWorkerFile: "service-worker.js",
+    excludePaths: ['test.*', '*.map', 'online.html',],
+    includePaths: ['/'],
+    fallback: [
+      '/online.html offline.html'      
+    ],
+    dynamicCache: [
+      '/api/todos'
+    ]
+  };
 
   return ENV;
 };
