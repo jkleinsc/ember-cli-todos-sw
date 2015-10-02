@@ -1,11 +1,14 @@
 import Ember from 'ember';
 
-var isEmpty = Ember.isEmpty;
-var filterBy = Ember.computed.filterBy;
-var computed = Ember.computed;
-var service = Ember.inject.service;
+const {
+  Component,
+  isEmpty,
+  computed,
+  computed: { filterBy },
+  inject: { service }
+} = Ember;
 
-export default Ember.Component.extend({
+export default Component.extend({
   store: service(),
 
   filtered: computed('todos.@each.isCompleted', 'filter', function() {
@@ -35,7 +38,7 @@ export default Ember.Component.extend({
       todos.setEach('isCompleted', value);
       todos.invoke('save');
       return value;
-    } 
+    }
   }),
 
   actions: {
@@ -66,8 +69,7 @@ export default Ember.Component.extend({
       var completed = this.get('completed');
 
       completed.toArray(). // clone the array, so it is not bound while we iterate over and delete.
-        invoke('deleteRecord').
-        invoke('save');
+        invoke('destroyRecord');
     }
   },
 });
