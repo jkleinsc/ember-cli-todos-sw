@@ -35,7 +35,7 @@ module.exports = function(environment) {
       'img-src': "'self' data:",
       'style-src': "'self' 'unsafe-inline'",
       'media-src': "'self'"
-    }
+    };
   }
 
   if (environment === 'test') {
@@ -53,20 +53,19 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
-  
+
   ENV.serviceWorker = {
-    debug: false,
     enabled: true,
-    serviceWorkerFile: "service-worker.js",
-    excludePaths: ['test.*', '*.map', 'online.html',],
-    includePaths: ['/'],
+    debug: false,
+    precacheURLs: ['/api/offlineStates'],
+    excludePaths: ['test.*', 'robots.txt'],
     fallback: [
-      '/online.html offline.html'      
+      '/api/states /api/offlineStates'
     ],
     dynamicCache: [
       '/api/todos'
     ]
-  };
+};
 
   return ENV;
 };
