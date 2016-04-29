@@ -58,10 +58,6 @@ function completed() {
   return $(completedSelector);
 }
 
-function mock(options) {
-  return Ember.$.extend(true, {}, options);
-}
-
 test('todos renders', function(assert) {
   assert.expect(7);
 
