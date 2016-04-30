@@ -45,15 +45,11 @@ module.exports = function(environment) {
 
   ENV.serviceWorker = {
     enabled: true,
-    debug: false,
-    precacheURLs: ['/api/offlineStates'],
-    excludePaths: ['test.*', 'robots.txt'],
-    fallback: [
-      '/api/states /api/offlineStates'
-    ],
-    dynamicCache: [
+    debug: true,
+    networkFirstURLs: [
       '/api/todos'
     ]
+
 };
 
   return ENV;

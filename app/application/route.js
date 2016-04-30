@@ -8,10 +8,14 @@ export default Ember.Route.extend({
   },
 
   model(params) {
-    return this.store.findAll('todo').then((todos) => ({
-      all: todos,
-      filter: params.state
-    }));
+    return new Ember.RSVP.Promise((resolve) => {
+      this.store.findAll('todo').then((todos) => resolve({
+        all: todos,
+        filter: params.state
+      })).catch((err) => {
+        console.log("err:",err);
+        resolve();
+      });
+    });
   }
-
 });

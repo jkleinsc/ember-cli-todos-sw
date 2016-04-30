@@ -11,14 +11,18 @@ var mockData = [{
     title: 'Develop amazing things',
     isCompleted: false
 }];
+
+var delay = 0;
 module.exports = function(app) {
   var express = require('express');
   var todosRouter = express.Router();
 
   todosRouter.get('/', function(req, res) {
-    res.send({
-      'todos': mockData
-    });
+    setTimeout(function() {
+      res.send({
+        'todos': mockData
+      });
+    }, delay);
   });
 
   todosRouter.post('/', function(req, res) {

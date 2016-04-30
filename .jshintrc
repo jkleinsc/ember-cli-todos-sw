@@ -2,7 +2,12 @@
   "predef": [
     "document",
     "window",
-    "-Promise"
+    "-Promise",
+    "Promise",
+    "logDebug",
+    "toolbox",
+    "self",
+    "Response"
   ],
   "browser": true,
   "boss": true,
